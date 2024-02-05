@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graph Path Finder</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<style>
+  /* Add your styles here */
+  .container {
+    padding: 20px;
+  }
+  select {
+    width: 200px;
+    height: 100px;
+    margin-right: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Select IDs for List 1 and List 2</h2>
+    <select id="list1" class="choices-select" multiple onchange="validateInput()"></select>
+    <select id="list2" class="choices-select" multiple></select>
+    <h2>Select Target ID</h2>
+    <select id="targetId" class="choices-select" onchange="validateInput()"></select>
+    <button id="findPathButton" onclick="findPath()">Find Shortest Path</button>
+    <h3>Shortest Path:</h3>
+    <div id="pathResult"></div>
+</div>
+
+
+<script src="graph.js"></script>
+</body>
+</html>
